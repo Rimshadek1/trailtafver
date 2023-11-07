@@ -29,10 +29,10 @@ app.use(bodyParser.json());
 require('dotenv').config();
 
 // Making Build Folder as Public 
-app.use(express.static(path.join(__dirname, './client/static')));
+app.use(express.static(path.join(__dirname, './static')));
 
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, './client/static/index.html'));
+    res.sendFile(path.join(__dirname, 'static', 'index.html'));
 });
 
 
